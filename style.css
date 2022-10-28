@@ -1,0 +1,193 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+  --hue:191;
+  --bg-body: hsla(0, 0%, 0%, 1);
+  --table-border: hsla(var(--hue), 31%, 42%, 1);
+  --bg-btn: hsla(var(--hue), 91%, 25%, 1);
+  --bg-input: hsla(var(--hue), 65%, 7%, 1);
+  --bg-thead: hsla(var(--hue), 72%, 13%, 1);
+  --bg-tbody: hsla(191, 61%, 6%, 0.5);
+  --bg-button:#F75A68;
+  --fc-input: #7C7C8A;
+  --fc-table:#E1E1E6;
+  --fc-empty: hsla(189, 4%, 32%, 1);
+
+
+}
+
+body{
+  background-color: var(--bg-body);
+  height: 100vh;
+}
+
+body *{
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.sr-only {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+#app {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5.5rem;
+}
+
+header .search-bar {
+  display: flex;
+  gap: .8rem;
+}
+
+header .search-bar input {
+  width: 46.2rem;
+  padding: 1.6rem;
+
+  border: none;
+  border-radius: .5rem;
+  background-color: var(--bg-input);
+  color: var(--fc-table);
+  }
+
+header .search-bar input::placeholder{
+    color: var(--fc-input);
+  }
+
+header .search-bar button{
+  display: flex;
+  align-items: center;
+  gap:.8rem ;
+  
+  padding: 1.2rem 3.2rem;
+
+  background-color: var(--bg-btn);
+  color: white;
+  border: none;
+  border-radius:.5rem;
+  cursor: pointer;
+
+  font-weight: bold;  
+}
+
+table{
+  width: 100%;
+  margin-top: 6rem;
+  text-align: left;
+
+  border: 1px solid var(--table-border);
+  border-spacing: 0;
+  overflow:hidden ;
+  border-radius: 1.2rem;
+  color: var(--fc-table);
+
+  position: relative;
+
+
+}
+
+thead{
+  background-color: var(--bg-thead);
+}
+
+thead th, tbody td{
+  padding: 1.6rem 4rem;
+  margin: 0;
+}
+
+thead th:first-child {
+  width: 45%;
+}
+
+
+tbody tr {
+  border: 1px solid var(--table-border);
+}
+
+tbody tr:first-child{
+  border-top: none;
+}
+
+tbody tr:nth-last-child(2){
+  border-bottom: none;
+}
+
+tbody tr:nth-child(odd){
+  background-color: var(--bg-input);
+}
+
+.user {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.user img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  
+}
+
+.user a {
+  text-decoration: none;
+  color: var(--fc-table);
+}
+
+.user p {
+  margin-bottom: .8rem;
+  font-weight: bold;
+}
+
+.btn-remove{
+  background: none;
+  border: none;
+  color:var(--bg-button) ;
+  cursor: pointer;
+  font-weight: bold;
+  /* font-family: 'Roboto', sans-serif; */
+}
+
+.empty-layout td{
+  height: 400px;
+}
+
+.empty-layout td:nth-child(1){
+  position: absolute;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.empty-layout h1{
+font-family: Roboto Mono;
+font-size: 4rem;
+line-height: 2.5rem;
+color: var(--fc-input);
+
+}
